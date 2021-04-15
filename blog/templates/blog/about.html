@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>AMZODIAC BLOG</title>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
+<  <!-- glyphicons -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  </head>
+  <body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+				<!-- Header -->
+					<header id="header">
+						<a href="{% url 'post_list' %}" class="logo">GO TO HOME</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="{% url 'post_list' %}">HOME</a></li>
+							<li class="active"><a href="{% url 'about' %}">ABOUT</a></li>
+							<li><a href="{% url 'contact' %}">CONTACT</a></li>
+							{% if user.is_authenticated %}
+							<li><a href="{% url 'post_new' %}">New Post</a></li>
+							<li><a href="{% url 'post_draft_list' %}">Drafts</a></li>
+							<li><a href="{% url 'logout' %}">Log Out</a></li>
+							{% else %}
+							<li><a href="{% url 'login' %}">Log In</a></li>
+              {% endif %}
+						</ul>
+						<ul class="icons">
+              <li><a href="https://www.linkedin.com/in/abinash-mudbhari-5833421b4/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+							<li><a href="https://twitter.com/MudbhariAbinash" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/abinash.mudbhari.37" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/_a.b.h.i_n.a.s.h_/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/abinash-mudbhari" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+
+						</ul>
+					</nav>
+
+
+
+          <div id="main">
+
+                  <!-- Post -->
+                    <section class="post">
+
+                      <h2>Major skills:</h2>
+                      <p style="display:flex;flex-wrap:wrap;"> <span class="button large">HTML</span>  <span class="button large">CSS</span class="button large">  <span class="button large">Python</span>  <span class="button large">Django</span> <span class="button large">API's</span> <span class="button large">Rest</span>  </p>
+                      <h2>Other minor skills:</h2>
+                      <p style="display:flex;flex-wrap:wrap;"><span class="button large">JavaScript</span>  <span class="button large">Bootstrap</span>  <span class="button large">JQuery</span> <span class="button large">Office</span> </p>
+                      <p><strong style="font-size:1.5em;">Email:</strong><span style="color:blue;font-size:1em; text-transform:lowercase; text-decoration: underline; margin:.5em;">abinashmudbhari@gmail.com</span></p>
+                      <p><h2>Click for My CV:</h2><a style="margin:20px;"href="https://github.com/abinash-mudbhari/MyWebsite/raw/master/MyPortfolio/media/pdf/abinashresume.pdf"><button type="button" class="button large">Download my Cv</button> </a></p>
+                      <p>I am a <span style="color:blue;">Self Taught Developer</span></p>
+                      <p>I am Developing myself to be a <span style="color:blue;">Software Developer</span></p>
+                      <p>I have completed my bachelor's degree in civil engineering in 2018. A year of working on civil companies I found civil technicalities wasn’t my cup of tea. I was using the tools of Civil like AUTOCAD, sap, ETABS but I was more fascinated by the tech that was used to create that software. I needed to know how they were built. Then I learned about Python. I started learning it and after learning Python, I was completely carried away by it then I knew the framework called Django. I was excited about building my website. I started learning the basics of website building like HTML5, CSS, and Bootstrap. In 2019 I got a job as part-time in Website Designing. There I have to use CSS and HTML for frontend development and Django and Python as a Backend. I used to teach Python to some high school students. I did freelancing jobs as a helping agent to built websites of some initial developing companies. Then I learned the basics of JavaScript and jQuery. Now I am partially ready for creating a website. I completely left my Civil Engineering career for the sake of my passion and here I am now learning different Things about Programming Every Day. I am committed to lifelong learning as I am extremely motivated and now I like what I am doing. I came to America in 2020 and I was happy that I would make a tiny space in this Programming Tech someday in the future.
+                          I will be creating lots of Projects so dont Forget to check out my Github...
+                      <a href="https://github.com/abinash-mudbhari" class="icon brands fa-github"><span class="label">GitHub</span></a></p>
+                      <p>Check out this link for cool templates like mine:  <a href="https://html5up.net/"><button type="links" class="button">HTML5UP</button></a></p>
+                      </section>
+                      <ul class="actions">
+                        <li style="font-size:1.5em;">Lets Make Something Together: <a style="margin-top:20px;" href="{% url 'contact' %}" class="button icon solid solo fa-arrow-right scrolly">Continue</a></li>
+                      </ul>
+
+                </div>
+
+
+                <div id="copyright">
+                  <ul><li>&copy; 2020.AMZODIAC</li><li>All Rights Reserved</li></ul>
+                </div>
+          </div>
+          <!-- Scripts -->
+          <script src="static/js/jquery.min.js"></script>
+          <script src="static/js/jquery.scrollex.min.js"></script>
+          <script src="static/js/jquery.scrolly.min.js"></script>
+          <script src="static/js/browser.min.js"></script>
+          <script src="static/js/breakpoints.min.js"></script>
+          <script src="static/js/util.js"></script>
+          <script src="static/js/main.js"></script>
+
+
+  </body>
+</html>
